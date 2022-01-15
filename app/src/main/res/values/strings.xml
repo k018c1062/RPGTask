@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">RPGTask_for_Kotlin</string>
+    <string name="game">ゲーム</string>
+    <string name="task">タスク</string>
+    <string name="search">検索</string>
+    <string name="task_add">TaskAdd</string>
+    <string name="register">登録</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">追加</string>
+    <string name="finish">完了</string>
+
+
+    <string-array name="spinner_type_filter">
+        <item>全て</item>
+        <item>仕事</item>
+        <item>やりたいこと</item>
+        <item>趣味</item>
+        <item>私生活</item>
+        <item>その他</item>
+    </string-array>
+
+    <!--    成長項目-->
+    <string-array name="spinner_growth_items">
+        <item>体力</item>
+        <item>知力</item>
+        <item>魅力</item>
+        <item>創造力</item>
+    </string-array>
+
+    <!--    難易度-->
+    <string-array name="spinner_difficulty">
+        <item>かんたん</item>
+        <item>ふつう</item>
+        <item>むずかしい</item>
+    </string-array>
+
+    <!--    重要度-->
+    <string-array name="spinner_importance">
+        <item>とても重要</item>
+        <item>重要</item>
+        <item>普通</item>
+        <item>低い</item>
+        <item>とても低い</item>
+    </string-array>
+    <string-array name="spinner_repeat">
+        <item>単発</item>
+        <item>毎日</item>
+        <item>毎週</item>
+        <item>毎月</item>
+        <item>常設</item>
+    </string-array>
+
+</resources>

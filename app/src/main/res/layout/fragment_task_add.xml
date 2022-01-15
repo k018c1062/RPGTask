@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="2dp"
+    android:textColor="?android:attr/textColorPrimary"
+    android:background="?android:attr/colorBackground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/task_register_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/add"
+            android:layout_gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="?android:attr/colorBackground">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/register_view_icon_margin"
+                app:srcCompat="@drawable/task_name" />
+
+            <EditText
+                android:id="@+id/task_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="タスク名"
+                android:layout_weight="1"
+                android:ems="12"
+                android:hint="タスク名を追加"
+                android:inputType="text"
+
+                android:textColor="?android:attr/textColorPrimary"
+                android:background="?android:attr/colorBackground"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/register_view_linear_margin"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="?android:attr/colorBackground">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/register_view_icon_margin"
+                app:srcCompat="@drawable/task_memo" />
+
+            <EditText
+                android:id="@+id/task_memo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="1"
+                android:hint="メモを追加"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/register_view_linear_margin"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:minHeight="32dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="?android:attr/colorBackground">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/register_view_icon_margin"
+                app:srcCompat="@drawable/task_time" />
+
+            <TextView
+                android:id="@+id/task_time_limit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/register_view_linear_margin"
+            android:background="?android:attr/listDivider" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:minHeight="32dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="?android:attr/colorBackground">
+            <ImageView
+                android:id="@+id/news_type_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/register_view_icon_margin"
+                app:srcCompat="@drawable/ic_baseline_bookmark_border_24" />
+
+            <Spinner
+                android:id="@+id/spinner_type"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:entries="@array/spinner_type_filter"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/register_view_linear_margin"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="?android:attr/colorBackground">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/register_view_icon_margin"
+                app:srcCompat="@drawable/task_repeat" />
+
+            <Spinner
+                android:id="@+id/spinner_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:entries="@array/spinner_repeat"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/register_view_linear_margin"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="?android:attr/colorBackground">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/register_view_icon_margin"
+                app:srcCompat="@drawable/task_importance" />
+
+            <Spinner
+                android:id="@+id/spinner_importance"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:entries="@array/spinner_importance"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/register_view_linear_margin"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="?android:attr/colorBackground">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/register_view_icon_margin"
+                app:srcCompat="@drawable/ic_baseline_self_improvement_24" />
+
+            <Spinner
+                android:id="@+id/spinner_growth_items"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:entries="@array/spinner_growth_items"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/register_view_linear_margin"
+            android:background="?android:attr/listDivider" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="?android:attr/colorBackground">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/register_view_icon_margin"
+                app:srcCompat="@drawable/ic_baseline_mood_24" />
+
+            <Spinner
+                android:id="@+id/spinner_difficulty"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:entries="@array/spinner_difficulty"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

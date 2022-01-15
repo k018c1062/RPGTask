@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/task_item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/taskitem_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp">
+
+        <View
+            android:id="@+id/line_vertical_type"
+            android:layout_width="6dp"
+            android:layout_height="0dp"
+            android:elevation="2dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/task_info"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/task_info_height"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/materialButton"
+            app:layout_constraintStart_toEndOf="@id/line_vertical_type"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/task_item_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/task_item_memo_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:maxLines="1" />
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/task_info_height"
+            android:text="@string/finish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:el_duration="300"
+            app:el_parallax="0.3"
+            android:layout_marginStart="4dp"
+            android:paddingVertical="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/line_vertical_type"
+            app:layout_constraintTop_toBottomOf="@id/task_info">
+
+            <LinearLayout
+                android:id="@+id/time_limit_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/task_info_title_weight"
+                    android:textSize="@dimen/task_info_size" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1" />
+
+                <TextView
+                    android:id="@+id/time_limit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/task_info_item_weight"
+                    android:textSize="@dimen/task_info_size" />
+            </LinearLayout>
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expandable_layout"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

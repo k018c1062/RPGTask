@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_title_size">18sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="register_view_icon_margin">8dp</dimen>
+    <dimen name="register_view_start_margin">32dp</dimen>
+    <dimen name="register_view_top_margin">8dp</dimen>
+    <dimen name="register_view_linear_margin">12dp</dimen>
+
+    <dimen name="task_title_size">28sp</dimen>
+    <dimen name="task_memo_size">14sp</dimen>
+    <dimen name="task_info_size">16sp</dimen>
+    <dimen name="task_margin">8dp</dimen>
+    <dimen name="task_info_title_weight">0.4</dimen>
+    <dimen name="task_info_item_weight">0.6</dimen>
+
+    <dimen name="item_grid_margin">3dp</dimen>
+    <dimen name="item_grid_icon_size">70dp</dimen>
+    <dimen name="item_grid_image_size">60dp</dimen>
+
+    <dimen name="task_info_height">60dp</dimen>
+    <dimen name="task_info_margin_top">8dp</dimen>
+    <dimen name="task_info_margin_horizontal">8dp</dimen>
+</resources>
